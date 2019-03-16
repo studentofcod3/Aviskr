@@ -1,0 +1,207 @@
+.container {
+  max-width: 1600px;
+  padding: 0 10rem;
+  margin: auto;
+  overflow: hidden; }
+
+.text-center {
+  text-align: center; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.3rem;
+  text-transform: uppercase; }
+  .section-title-sub {
+    font-size: 1.3rem;
+    text-transform: none; }
+
+a {
+  text-decoration: none; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "News Cycle", sans-serif; }
+
+#navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh; }
+  #navbar .logo {
+    color: #333;
+    padding: 0.5rem 3rem;
+    font-family: "cinzel decorative", cursive;
+    font-size: 2rem;
+    text-decoration: none; }
+    #navbar .logo:hover {
+      color: #cccccc; }
+  #navbar ul {
+    list-style: none;
+    margin-right: 3rem; }
+    #navbar ul li {
+      color: #333;
+      display: inline-block;
+      margin: 1rem 3rem;
+      position: relative;
+      font-size: 1.1rem; }
+      #navbar ul li a {
+        color: #333; }
+      #navbar ul li ul {
+        display: none; }
+        #navbar ul li ul li {
+          border-left: transparent 2px solid; }
+          #navbar ul li ul li a {
+            color: #ddd; }
+      #navbar ul li:hover {
+        cursor: pointer;
+        z-index: 1; }
+        #navbar ul li:hover a {
+          color: #ddd; }
+        #navbar ul li:hover ul {
+          display: block;
+          position: absolute;
+          left: -50%;
+          width: 200%;
+          background: #fff;
+          text-align: center;
+          margin-bottom: 0.5rem; }
+          #navbar ul li:hover ul li {
+            display: block;
+            font-size: 1.1rem;
+            padding: 0 0 0 0.5rem;
+            margin: 0.5rem 0; }
+            #navbar ul li:hover ul li:hover, #navbar ul li:hover ul li.current {
+              border-color: #333; }
+              #navbar ul li:hover ul li:hover a, #navbar ul li:hover ul li.current a {
+                color: #333; }
+
+#home-articles {
+  padding-top: 9rem;
+  height: 93vh; }
+  #home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    position: relative;
+    transition: visibility 2s; }
+    #home-articles .articles-container a:hover .text {
+      visibility: visible;
+      letter-spacing: 1.5px; }
+      #home-articles .articles-container a:hover .text h4 {
+        font-weight: 100;
+        letter-spacing: 0.9px; }
+    #home-articles .articles-container .card {
+      position: relative;
+      height: 250px;
+      transition: height 1s; }
+      #home-articles .articles-container .card:hover {
+        height: 270px; }
+      #home-articles .articles-container .card-drone {
+        background: url("../img/drone.jpg") no-repeat center center/cover; }
+      #home-articles .articles-container .card-new {
+        background: url("../img/new_article.jpg") no-repeat center center/cover; }
+      #home-articles .articles-container .card .text {
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        bottom: 1rem;
+        border-left: 0.2rem solid #fff;
+        padding-left: 5px;
+        color: #111;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
+
+.header-drone {
+  height: 100vh;
+  margin-bottom: 7rem; }
+  .header-drone #navbar {
+    height: 7%;
+    z-index: 1; }
+    .header-drone #navbar ul li ul {
+      z-index: 1; }
+  .header-drone .image-container:before {
+    content: "";
+    background: url("../img/drone.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    height: 93%;
+    z-index: 0; }
+
+.drone-article {
+  height: 200vh;
+  position: relative; }
+  .drone-article .date {
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .drone-article .date div {
+      border-bottom: 1.4px #111 solid; }
+      .drone-article .date div:last-child {
+        border-bottom: transparent; }
+  .drone-article .drone-article-body {
+    padding: 1.4rem 0;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    position: relative;
+    height: 100%; }
+    .drone-article .drone-article-body .drone-article-text p {
+      margin-bottom: 1rem;
+      font-size: 1.2rem; }
+    .drone-article .drone-article-body .image-container {
+      height: 100%;
+      position: relative; }
+      .drone-article .drone-article-body .image-container div {
+        position: sticky;
+        top: 0.5rem;
+        height: 500px; }
+        .drone-article .drone-article-body .image-container div .image {
+          background: url("../img/drone-full.jpg") no-repeat bottom center/cover;
+          height: 500px;
+          margin-left: 4rem; }
+
+@media (max-width: 800px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    #navbar ul {
+      align-self: center; }
+      #navbar ul li {
+        display: block; }
+        #navbar ul li:hover ul {
+          width: 100%;
+          position: relative; } }
