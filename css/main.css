@@ -31,15 +31,6 @@
 .my-4 {
   margin: 4rem 0; }
 
-.section-title {
-  font-size: 2rem;
-  display: block;
-  padding-bottom: 0.3rem;
-  text-transform: uppercase; }
-  .section-title-sub {
-    font-size: 1.3rem;
-    text-transform: none; }
-
 a {
   text-decoration: none; }
 
@@ -52,13 +43,13 @@ body {
   font-family: "News Cycle", sans-serif; }
 
 #navbar {
-  background: #fff;
+  background: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 7vh; }
   #navbar .logo {
-    color: #333;
+    color: #fff;
     padding: 0.5rem 3rem;
     font-family: "cinzel decorative", cursive;
     font-size: 2rem;
@@ -69,13 +60,13 @@ body {
     list-style: none;
     margin-right: 3rem; }
     #navbar ul li {
-      color: #333;
+      color: #fff;
       display: inline-block;
       margin: 1rem 3rem;
       position: relative;
       font-size: 1.1rem; }
       #navbar ul li a {
-        color: #333; }
+        color: #fff; }
       #navbar ul li ul {
         display: none; }
         #navbar ul li ul li {
@@ -92,7 +83,7 @@ body {
           position: absolute;
           left: -50%;
           width: 200%;
-          background: #fff;
+          background: #333;
           text-align: center;
           margin-bottom: 0.5rem; }
           #navbar ul li:hover ul li {
@@ -101,9 +92,9 @@ body {
             padding: 0 0 0 0.5rem;
             margin: 0.5rem 0; }
             #navbar ul li:hover ul li:hover, #navbar ul li:hover ul li.current {
-              border-color: #333; }
+              border-color: #fff; }
               #navbar ul li:hover ul li:hover a, #navbar ul li:hover ul li.current a {
-                color: #333; }
+                color: #fff; }
 
 #home-articles {
   padding-top: 9rem; }
@@ -125,11 +116,9 @@ body {
       height: 250px;
       transition: height 1s; }
       #home-articles .articles-container .card:hover {
-        height: 270px; }
+        height: 110%; }
       #home-articles .articles-container .card-drone {
         background: url("../img/drone.jpg") no-repeat center center/cover; }
-      #home-articles .articles-container .card-new {
-        background: url("../img/new_article.jpg") no-repeat center center/cover; }
       #home-articles .articles-container .card .text {
         visibility: hidden;
         position: absolute;
@@ -142,10 +131,13 @@ body {
 
 .header-drone {
   height: 100vh;
-  margin-bottom: 7rem; }
+  width: auto;
+  overflow: hidden; }
   .header-drone #navbar {
     height: 7vh;
-    z-index: 1; }
+    z-index: 1;
+    position: sticky;
+    top: 0; }
     .header-drone #navbar ul li ul {
       z-index: 1; }
   .header-drone .image-container {
@@ -153,10 +145,22 @@ body {
     position: absolute;
     top: 7vh;
     left: 0;
-    width: 100vw;
     height: 93vh;
+    width: 100%;
     z-index: 0;
     overflow: hidden; }
+
+#subtitle-btns {
+  margin-bottom: 4rem;
+  padding: 1rem 3rem;
+  background: #333; }
+  #subtitle-btns div {
+    margin: auto; }
+    #subtitle-btns div a {
+      color: #fff;
+      margin-right: 2rem; }
+      #subtitle-btns div a:hover {
+        color: #cccccc; }
 
 .drone-article {
   position: relative;
@@ -170,54 +174,141 @@ body {
       border-bottom: 1.4px #111 solid; }
       .drone-article .date div:last-child {
         border-bottom: transparent; }
+  .drone-article .section-title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.3rem;
+    text-transform: uppercase; }
+    .drone-article .section-title-sub {
+      font-size: 1.3rem;
+      text-transform: none; }
   .drone-article-body {
     padding: 1.4rem 0;
     margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
     position: relative;
     height: 100%; }
-    .drone-article-body .drone-article-text p {
-      margin-bottom: 1rem;
-      font-size: 1.2rem; }
-    .drone-article-body .image-container {
-      height: 100%;
-      position: relative; }
-      .drone-article-body .image-container div {
-        position: sticky;
-        top: 0.5rem;
-        max-height: 400px; }
-        .drone-article-body .image-container div .image {
-          background: url("../img/drone-full.jpg") no-repeat bottom center/cover;
-          height: 500px;
-          margin-left: 4rem; }
+    .drone-article-body .drone-article-text {
+      height: 100%; }
+      .drone-article-body .drone-article-text div h3 {
+        padding: 2px 7px 20px 7px;
+        margin-bottom: .2rem;
+        border-radius: 2px; }
+      .drone-article-body .drone-article-text div #drone-introduction {
+        background: linear-gradient(to bottom right, #c4deee, #eed4c4);
+        color: #000; }
+      .drone-article-body .drone-article-text div #history-of-drones {
+        background: linear-gradient(to bottom right, #B0D3E8, #e8c5b0);
+        color: #000; }
+      .drone-article-body .drone-article-text div #military-capacity {
+        background: linear-gradient(to bottom right, #75b2d7, #d79a75);
+        color: #000; }
+      .drone-article-body .drone-article-text div #us-drone-policy {
+        background: linear-gradient(to bottom right, #c4deee, #eed4c4);
+        color: #000; }
+      .drone-article-body .drone-article-text div #legal-ramifications {
+        background: linear-gradient(to bottom right, #89bddd, #dda989);
+        color: #000; }
+      .drone-article-body .drone-article-text div #obama {
+        background: linear-gradient(to bottom right, #9dc8e3, #e3b89d);
+        color: #000; }
+      .drone-article-body .drone-article-text div #trump {
+        background: linear-gradient(to bottom right, #111, #eed4c4);
+        color: #000; }
+      .drone-article-body .drone-article-text div #conclusion {
+        background: linear-gradient(to bottom right, #111, #eed4c4);
+        color: #000; }
+      .drone-article-body .drone-article-text p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem; }
 
-@media (max-width: 768px) {
-  #navbar {
+@media (max-width: 1024px) {
+  #navbar,
+  .header-drone #navbar {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    #navbar .logo {
-      padding-bottom: 0; }
-    #navbar ul {
-      align-self: center;
-      margin: 0; }
-      #navbar ul li {
-        margin: 0 10px; }
-        #navbar ul li:hover ul {
-          z-index: 1; }
+    justify-content: center;
+    height: 14vh; }
+    #navbar .logo,
+    .header-drone #navbar .logo {
+      padding-bottom: 2rem; }
+    #navbar ul li,
+    .header-drone #navbar ul li {
+      margin: 0 35px; }
+      #navbar ul li:hover ul,
+      .header-drone #navbar ul li:hover ul {
+        z-index: 1; }
   #home-articles {
-    padding-top: 2rem; }
+    padding-top: 0; }
     #home-articles .articles-container {
       grid-template-columns: 1fr; }
       #home-articles .articles-container .card {
-        height: 100px; }
+        height: 400px; }
   .header-drone .image-container {
     background: url("../img/drone-full.jpg") no-repeat center center/cover;
     position: absolute;
-    top: 20vh; }
+    top: 14vh; }
+  .drone-article {
+    padding: 0 2rem; }
+    .drone-article .section-title {
+      padding-top: 2rem; }
+    .drone-article-body {
+      display: block; }
+      .drone-article-body .image-container {
+        display: none; } }
+
+@media (max-width: 800px) {
+  #home-articles .articles-container .card {
+    height: 300px; } }
+
+@media (max-width: 500px) {
+  #navbar .logo,
+  .header-drone #navbar .logo {
+    padding-bottom: 0; }
+  #navbar ul,
+  .header-drone #navbar ul {
+    margin: 0; }
+    #navbar ul li,
+    .header-drone #navbar ul li {
+      margin: 0 10px;
+      font-size: 1rem; }
+  #home-articles {
+    padding-top: 1rem; }
+    #home-articles .articles-container {
+      grid-template-columns: 1fr; }
+      #home-articles .articles-container .card {
+        height: 120px; }
+  .header-drone {
+    margin-bottom: 2.8rem; }
+  #subtitle-btns div a {
+    display: block; } }
+
+@media (max-width: 350px) {
+  #navbar ul li,
+  .header-drone #navbar ul li {
+    margin: 5px; }
+  .header-drone {
+    margin-bottom: 2rem; } }
+
+@media (max-height: 580px) and (min-width: 500px) {
+  #navbar,
+  .header-drone #navbar {
+    height: 24vh; }
+    #navbar .logo,
+    .header-drone #navbar .logo {
+      padding-bottom: 0; }
+  #home-articles .articles-container {
+    grid-template-columns: repeat(2, 1fr); }
+    #home-articles .articles-container .card {
+      height: 150px; }
+  .header-drone .image-container {
+    background: url("../img/drone.jpg") no-repeat center center/cover;
+    top: 8vh; }
   .drone-article-body {
-    display: block; }
-    .drone-article-body .image-container {
-      display: none; } }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .drone-article-body div {
+      width: 100%; }
+      .drone-article-body div .image-container {
+        display: inline-block;
+        margin-left: 0;
+        max-height: 500px; } }
