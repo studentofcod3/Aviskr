@@ -132,7 +132,7 @@ body {
         background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
 
 .header-drone {
-  height: 100vh;
+  height: 295vh;
   width: auto;
   overflow: hidden; }
   .header-drone #navbar {
@@ -143,11 +143,11 @@ body {
     .header-drone #navbar ul li ul {
       z-index: 1; }
   .header-drone .image-container {
-    background: url("../img/drone.jpg") no-repeat center center/cover;
+    background: url("../img/drone-full.jpg") no-repeat top center/cover;
     position: absolute;
     top: 7vh;
     left: 0;
-    height: 93vh;
+    height: 288vh;
     width: 100%;
     z-index: 0;
     overflow: hidden; }
@@ -169,7 +169,7 @@ body {
 .drone-article {
   position: relative;
   padding: 0 4rem;
-  text-align: center; }
+  text-align: left; }
   .drone-article .date {
     text-transform: uppercase;
     position: absolute;
@@ -179,14 +179,16 @@ body {
       border-bottom: 1.4px #111 solid; }
       .drone-article .date div:last-child {
         border-bottom: transparent; }
-  .drone-article .section-title {
-    font-size: 2rem;
-    display: block;
-    padding-bottom: 0.3rem;
-    text-transform: uppercase; }
-    .drone-article .section-title-sub {
-      font-size: 1.3rem;
-      text-transform: none; }
+  .drone-article .drone-title {
+    text-align: center; }
+    .drone-article .drone-title .section-title {
+      font-size: 2rem;
+      display: block;
+      padding-bottom: 0.3rem;
+      text-transform: uppercase; }
+      .drone-article .drone-title .section-title-sub {
+        font-size: 1.3rem;
+        text-transform: none; }
   .drone-article-body {
     padding: 1.4rem 0;
     margin-bottom: 2rem;
@@ -197,7 +199,8 @@ body {
       .drone-article-body .drone-article-text div h3 {
         padding: 4px 7px 20px 7px;
         margin-top: 3rem;
-        border-top: #111 solid 1px; }
+        border-top: #111 solid 1px;
+        text-align: center; }
       .drone-article-body .drone-article-text p {
         margin-bottom: 1rem;
         font-size: 1.2rem; }
@@ -254,6 +257,8 @@ body {
     padding-top: 1rem; }
     #home-articles .articles-container .card {
       height: 120px; }
+      #home-articles .articles-container .card-drone:hover {
+        background: url("../img/drone-full.jpg") no-repeat center center/cover; }
   .header-drone {
     margin-bottom: 2.8rem; }
   #subtitle-btns div a {
