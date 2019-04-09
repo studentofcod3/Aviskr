@@ -159,10 +159,12 @@ body {
   #subtitle-btns div {
     margin: auto;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     #subtitle-btns div a {
       color: #fff;
-      margin: 0 2rem; }
+      margin: 0 2rem;
+      text-align: center; }
       #subtitle-btns div a:hover {
         color: #cccccc; }
 
@@ -194,16 +196,27 @@ body {
     margin-bottom: 2rem;
     position: relative;
     height: 100%; }
-    .drone-article-body .drone-article-text {
-      height: 100%; }
-      .drone-article-body .drone-article-text div h3 {
-        padding: 4px 7px 20px 7px;
-        margin-top: 3rem;
-        border-top: #111 solid 1px;
-        text-align: center; }
-      .drone-article-body .drone-article-text p {
-        margin-bottom: 1rem;
-        font-size: 1.2rem; }
+    .drone-article-body .drone-article-text div h3 {
+      padding: 4px 7px 20px 7px;
+      margin-top: 3rem;
+      border-top: #111 solid 1px;
+      text-align: center; }
+    .drone-article-body .drone-article-text div #introduction {
+      display: none; }
+    .drone-article-body .drone-article-text div div {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 1rem; }
+      .drone-article-body .drone-article-text div div p {
+        font-size: 1.2rem;
+        height: auto; }
+    .drone-article-body .drone-article-text div #history-of-drones + div, .drone-article-body .drone-article-text div #military-capacity + div {
+      grid-template-rows: none; }
+    .drone-article-body .drone-article-text div #legal-ramifications + div {
+      grid-template-rows: repeat(autofill, 1fr); }
+    .drone-article-body .drone-article-text div #trump + div {
+      grid-template-rows: repeat(autofill, 1fr); }
 
 @media (max-width: 1024px) {
   #navbar,
@@ -211,13 +224,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 14vh; }
+    height: 15vh; }
     #navbar .logo,
     .header-drone #navbar .logo {
-      padding-bottom: 2rem; }
+      padding-bottom: 1rem; }
     #navbar ul li,
     .header-drone #navbar ul li {
-      margin: 0 35px; }
+      margin: 0 4rem; }
       #navbar ul li:hover ul,
       .header-drone #navbar ul li:hover ul {
         z-index: 1; }
@@ -225,10 +238,13 @@ body {
     padding-top: 0; }
     #home-articles .articles-container .card {
       height: 400px; }
-  .header-drone .image-container {
-    background: url("../img/drone-full.jpg") no-repeat center center/cover;
-    position: absolute;
-    top: 14vh; }
+  .header-drone {
+    height: 110vh; }
+    .header-drone .image-container {
+      position: absolute;
+      top: 10vh;
+      width: 100%;
+      height: 100vh; }
   .drone-article {
     padding: 0 2rem; }
     .drone-article .section-title {
@@ -239,20 +255,33 @@ body {
         display: none; } }
 
 @media (max-width: 800px) {
-  #home-articles .articles-container .card {
-    height: 300px; } }
-
-@media (max-width: 500px) {
-  #navbar .logo,
-  .header-drone #navbar .logo {
-    padding-bottom: 0; }
-  #navbar ul,
-  .header-drone #navbar ul {
-    margin: 0; }
+  #navbar,
+  .header-drone #navbar {
+    height: 16vh; }
     #navbar ul li,
     .header-drone #navbar ul li {
-      margin: 0 10px;
-      font-size: 1rem; }
+      margin: 0 2.4rem; }
+  #home-articles .articles-container .card {
+    height: 300px; }
+  #subtitle-btns {
+    padding: 0;
+    font-size: .8rem; } }
+
+@media (max-width: 500px) {
+  #navbar,
+  .header-drone #navbar {
+    height: 16vh; }
+    #navbar .logo,
+    .header-drone #navbar .logo {
+      padding-bottom: 0; }
+    #navbar ul,
+    .header-drone #navbar ul {
+      margin: 0;
+      margin-bottom: .7rem; }
+      #navbar ul li,
+      .header-drone #navbar ul li {
+        margin: 0 10px;
+        font-size: 1rem; }
   #home-articles {
     padding-top: 1rem; }
     #home-articles .articles-container .card {
@@ -260,14 +289,23 @@ body {
       #home-articles .articles-container .card-drone:hover {
         background: url("../img/drone-full.jpg") no-repeat center center/cover; }
   .header-drone {
-    margin-bottom: 2.8rem; }
-  #subtitle-btns div a {
+    margin-bottom: 2.8rem;
+    height: 100vh; }
+  #subtitle-btns div {
+    flex-direction: column;
+    margin-top: .5rem; }
+    #subtitle-btns div a {
+      margin-top: .5rem auto; }
+  .drone-article-body .drone-article-text div div {
     display: block; } }
 
 @media (max-width: 350px) {
-  #navbar ul li,
-  .header-drone #navbar ul li {
-    margin: 5px; }
+  #navbar,
+  .header-drone #navbar {
+    height: 14vh; }
+    #navbar ul li,
+    .header-drone #navbar ul li {
+      margin: 5px; }
   .header-drone {
     margin-bottom: 2rem; } }
 
@@ -279,16 +317,17 @@ body {
     .header-drone #navbar .logo {
       padding-bottom: 0; }
   #home-articles .articles-container .card {
-    height: 150px; }
-  .header-drone .image-container {
-    background: url("../img/drone.jpg") no-repeat center center/cover;
-    top: 8vh; }
-  .drone-article-body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); }
-    .drone-article-body div {
-      width: 100%; }
-      .drone-article-body div .image-container {
-        display: inline-block;
-        margin-left: 0;
-        max-height: 500px; } }
+    height: 14rem; }
+  .header-drone {
+    height: 260vh; }
+    .header-drone .image-container {
+      top: 24vh;
+      height: 236vh; }
+  #subtitle-btns div a {
+    margin: .8rem; }
+  .drone-article-body div {
+    width: 100%; }
+    .drone-article-body div .image-container {
+      display: inline-block;
+      margin-left: 0;
+      max-height: 500px; } }
