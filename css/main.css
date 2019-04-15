@@ -286,6 +286,7 @@ body {
       height: 120px;
       min-height: 0; }
       #home-articles .articles-container .card-drone:hover {
+        height: 100%;
         background: url("../img/drone-full.jpg") no-repeat center center/cover; }
   .header-drone {
     margin-bottom: 2.8rem;
