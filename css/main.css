@@ -50,15 +50,14 @@ body {
   height: 7vh; }
   #navbar .logo {
     color: #fff;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 2.5rem;
     font-family: "cinzel decorative", cursive;
     font-size: 2rem;
     text-decoration: none; }
     #navbar .logo:hover {
       color: #cccccc; }
   #navbar ul {
-    list-style: none;
-    margin-right: 3rem; }
+    list-style: none; }
     #navbar ul li {
       color: #fff;
       display: inline-block;
@@ -99,11 +98,10 @@ body {
 #home-articles {
   padding-top: 7rem; }
   #home-articles .articles-container {
-    height: 450px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
-    transition: visibility 2s;
+    transition: visibility 2s 2s;
     padding: 2rem; }
     #home-articles .articles-container a:hover .text {
       visibility: visible;
@@ -113,14 +111,14 @@ body {
         letter-spacing: 0.9px; }
     #home-articles .articles-container .card {
       position: relative;
-      width: 100%;
+      width: auto;
       height: 100%;
-      transition: all 1s;
+      transition: all 2s 1s;
       border-radius: 2px; }
       #home-articles .articles-container .card:hover {
-        height: 120%; }
+        background: url("../img/drone-thumbnail.gif") no-repeat center center/cover; }
       #home-articles .articles-container .card-drone {
-        background: url("../img/drone.jpg") no-repeat center center/cover; }
+        background: url("../img/drone.jpg") no-repeat center bottom/cover; }
       #home-articles .articles-container .card .text {
         visibility: hidden;
         position: absolute;
@@ -224,10 +222,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 15vh; }
+    height: 14vh; }
     #navbar .logo,
     .header-drone #navbar .logo {
-      padding-bottom: 1rem; }
+      padding-bottom: 2rem; }
     #navbar ul li,
     .header-drone #navbar ul li {
       margin: 0 4rem; }
@@ -291,28 +289,31 @@ body {
   .header-drone {
     margin-bottom: 2.8rem;
     height: 100vh; }
+    .header-drone .image-container {
+      top: 16vh; }
   #subtitle-btns div {
     flex-direction: column;
-    margin-top: .5rem; }
+    height: 15rem;
+    margin-top: 6rem;
+    padding: 2rem 0; }
     #subtitle-btns div a {
-      margin-top: .5rem auto; }
+      margin-top: .5rem; }
   .drone-article-body .drone-article-text div div {
     display: block; } }
 
 @media (max-width: 350px) {
-  #navbar,
-  .header-drone #navbar {
-    height: 14vh; }
-    #navbar ul li,
-    .header-drone #navbar ul li {
-      margin: 5px; }
+  #navbar ul li,
+  .header-drone #navbar ul li {
+    margin: 5px; }
   .header-drone {
-    margin-bottom: 2rem; } }
+    margin-bottom: 2rem; }
+  #subtitle-btns div {
+    margin-top: 5rem; } }
 
-@media (max-height: 580px) and (min-width: 500px) {
+@media only screen and (max-height: 400px) and (min-width: 500px) {
   #navbar,
   .header-drone #navbar {
-    height: 24vh; }
+    height: 22vh; }
     #navbar .logo,
     .header-drone #navbar .logo {
       padding-bottom: 0; }
