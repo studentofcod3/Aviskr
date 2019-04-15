@@ -283,7 +283,8 @@ body {
   #home-articles {
     padding-top: 1rem; }
     #home-articles .articles-container .card {
-      height: 120px; }
+      height: 120px;
+      min-height: 0; }
       #home-articles .articles-container .card-drone:hover {
         background: url("../img/drone-full.jpg") no-repeat center center/cover; }
   .header-drone {
