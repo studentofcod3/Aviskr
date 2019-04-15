@@ -96,12 +96,12 @@ body {
                 color: #fff; }
 
 #home-articles {
-  padding-top: 7rem; }
+  padding-top: 5rem; }
   #home-articles .articles-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
-    transition: visibility 2s 2s;
+    transition: visibility 2s;
     padding: 2rem; }
     #home-articles .articles-container a:hover .text {
       visibility: visible;
@@ -112,13 +112,13 @@ body {
     #home-articles .articles-container .card {
       position: relative;
       width: auto;
-      height: 100%;
+      min-height: 400px;
       transition: all 2s 1s;
       border-radius: 2px; }
-      #home-articles .articles-container .card:hover {
-        background: url("../img/drone-thumbnail.gif") no-repeat center center/cover; }
       #home-articles .articles-container .card-drone {
         background: url("../img/drone.jpg") no-repeat center bottom/cover; }
+      #home-articles .articles-container .card:hover {
+        background: url("../img/drone-thumbnail.gif") no-repeat center center/cover; }
       #home-articles .articles-container .card .text {
         visibility: hidden;
         position: absolute;
