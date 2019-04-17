@@ -103,12 +103,14 @@ body {
     grid-gap: 2rem;
     transition: visibility 2s;
     padding: 2rem; }
-    #home-articles .articles-container a:hover .text {
-      visibility: visible;
-      letter-spacing: 1.5px; }
-      #home-articles .articles-container a:hover .text h4 {
-        font-weight: 100;
-        letter-spacing: 0.9px; }
+    #home-articles .articles-container a:hover {
+      transition: all ease-in 2s; }
+      #home-articles .articles-container a:hover .text {
+        visibility: visible;
+        letter-spacing: 1.5px; }
+        #home-articles .articles-container a:hover .text h4 {
+          font-weight: 100;
+          letter-spacing: 0.9px; }
     #home-articles .articles-container .card {
       position: relative;
       width: auto;
@@ -123,7 +125,7 @@ body {
         visibility: hidden;
         position: absolute;
         width: 100%;
-        bottom: 4rem;
+        bottom: 2rem;
         border-left: 0.2rem solid #fff;
         padding-left: 5px;
         color: #111;
@@ -216,6 +218,9 @@ body {
     .drone-article-body .drone-article-text div #trump + div {
       grid-template-rows: repeat(autofill, 1fr); }
 
+.about-text p {
+  margin: 1rem auto; }
+
 @media (max-width: 1024px) {
   #navbar,
   .header-drone #navbar {
@@ -286,7 +291,7 @@ body {
       height: 120px;
       min-height: 120px; }
       #home-articles .articles-container .card-drone:hover {
-        height: 60vh;
+        height: 65vh;
         background: url("../img/drone-full.jpg") no-repeat center center/cover; }
   .header-drone {
     margin-bottom: 2.8rem;
