@@ -40,7 +40,7 @@ a {
   box-sizing: border-box; }
 
 body {
-  font-family: "News Cycle", sans-serif; }
+  font-family: "lato", sans-serif; }
 
 #navbar {
   background: #333;
@@ -57,7 +57,8 @@ body {
     #navbar .logo:hover {
       color: #cccccc; }
   #navbar ul {
-    list-style: none; }
+    list-style: none;
+    font-family: "Playfair Display", serif; }
     #navbar ul li {
       color: #fff;
       display: inline-block;
@@ -182,7 +183,8 @@ body {
       .drone-article .date div:last-child {
         border-bottom: transparent; }
   .drone-article .drone-title {
-    text-align: center; }
+    text-align: center;
+    font-family: "Playfair Display", serif; }
     .drone-article .drone-title .section-title {
       font-size: 2rem;
       display: block;
@@ -197,7 +199,9 @@ body {
     position: relative;
     height: 100%; }
     .drone-article-body .drone-article-text div h3 {
-      padding: 4px 7px 20px 7px;
+      font-family: "Playfair Display", serif;
+      padding-top: 1rem;
+      padding-bottom: 4.5rem;
       margin-top: 3rem;
       border-top: #111 solid 1px;
       text-align: center; }
@@ -207,9 +211,9 @@ body {
       display: grid;
       grid-auto-flow: column;
       grid-template-rows: repeat(2, 1fr);
-      grid-gap: 1rem; }
+      grid-gap: 3rem; }
       .drone-article-body .drone-article-text div div p {
-        font-size: 1.2rem;
+        line-height: 1.5;
         height: auto; }
     .drone-article-body .drone-article-text div #history-of-drones + div, .drone-article-body .drone-article-text div #military-capacity + div {
       grid-template-rows: none; }
@@ -260,10 +264,13 @@ body {
 @media (max-width: 800px) {
   #navbar,
   .header-drone #navbar {
-    height: 16vh; }
+    height: 18vh; }
+    #navbar .logo,
+    .header-drone #navbar .logo {
+      padding: 0; }
     #navbar ul li,
     .header-drone #navbar ul li {
-      margin: 0 2.4rem; }
+      margin: 0 2rem; }
   #home-articles .articles-container .card {
     height: 300px; }
   #subtitle-btns {
@@ -298,13 +305,6 @@ body {
     height: 100vh; }
     .header-drone .image-container {
       top: 16vh; }
-  #subtitle-btns div {
-    flex-direction: column;
-    height: 15rem;
-    margin-top: 6rem;
-    padding: 2rem 0; }
-    #subtitle-btns div a {
-      margin-top: .5rem; }
   .drone-article-body .drone-article-text div div {
     display: block; } }
 
