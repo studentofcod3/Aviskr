@@ -151,7 +151,6 @@ body {
   width: auto;
   overflow: hidden; }
   .header-drone #navbar {
-    height: 7vh;
     z-index: 1;
     position: sticky;
     top: 0; }
@@ -239,27 +238,28 @@ body {
 .about-text p {
   margin: 1rem auto; }
 
-#contact .text-fields {
-  display: grid;
-  grid-template-areas: "name company" "email subject" "enquiry enquiry";
-  grid-gap: 1.2rem;
-  margin: 1.2rem; }
-  #contact .text-fields .name-input {
-    grid-area: name; }
-  #contact .text-fields .company-input {
-    grid-area: company; }
-  #contact .text-fields .email-input {
-    grid-area: email; }
-  #contact .text-fields .subect-input {
-    grid-area: subject; }
-  #contact .text-fields .enquiry-input {
-    grid-area: enquiry;
-    height: 150px; }
-  #contact .text-fields .text-input {
-    padding: 0.4rem 0.7rem; }
-
-#contact button[type='submit'] {
-  width: 50%; }
+#contact {
+  margin: 3rem 0; }
+  #contact .text-fields {
+    display: grid;
+    grid-template-areas: "name company" "email subject" "enquiry enquiry";
+    grid-gap: 1.2rem;
+    margin: 1.2rem; }
+    #contact .text-fields .name-input {
+      grid-area: name; }
+    #contact .text-fields .company-input {
+      grid-area: company; }
+    #contact .text-fields .email-input {
+      grid-area: email; }
+    #contact .text-fields .subect-input {
+      grid-area: subject; }
+    #contact .text-fields .enquiry-input {
+      grid-area: enquiry;
+      height: 150px; }
+    #contact .text-fields .text-input {
+      padding: 0.4rem 0.7rem; }
+  #contact button[type='submit'] {
+    width: 50%; }
 
 @media (max-width: 1024px) {
   #navbar,
