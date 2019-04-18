@@ -342,7 +342,9 @@ body {
     .header-drone .image-container {
       top: 16vh; }
   .drone-article-body .drone-article-text div div {
-    display: block; } }
+    display: block; }
+  #contact .text-fields {
+    grid-template-areas: "name" "company" "email" "subject" "enquiry"; } }
 
 @media (max-width: 350px) {
   #navbar ul li,
