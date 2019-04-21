@@ -48,6 +48,19 @@ a {
   .btn-contact:hover {
     background: #666666; }
 
+#coming-soon-page {
+  background: #333;
+  height: 100vh;
+  width: 100vw;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #coming-soon-page span {
+    font-size: 7rem;
+    font-family: 'Cinzel Decorative', cursive;
+    color: #ddd; }
+
 * {
   margin: 0;
   padding: 0;
@@ -260,6 +273,10 @@ body {
       padding: 0.4rem 0.7rem; }
   #contact button[type='submit'] {
     width: 50%; }
+
+#vizContainer {
+  width: 800px;
+  height: 700px; }
 
 @media (max-width: 1024px) {
   #navbar,

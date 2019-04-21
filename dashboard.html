@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Lato|Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Dashboard</title>
+
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script type="text/javascript">
+    function initViz() {
+      var containerDiv = document.getElementById("vizContainer"),
+        url = "https://public.tableau.com/profile/afraz.ahmad#!/vizhome/DroneWars/Overview",
+        options = {
+          hideTabs: true,
+          onFirstInteractive: function () {
+            console.log("Run this code when the viz has finished loading.");
+          }
+        };
+
+      var viz = new tableau.Viz(containerDiv, url, options);
+      // Create a viz object and embed it in the container div.
+    }
+  </script>
+</head>
+
+<body onload="initViz();">
+  <nav id="navbar">
+    <a href="index.html" class="logo">
+      <p>Aviskr</p>
+    </a>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li>
+        Editorials
+        <ul>
+          <li><a href="drone_wars.html">Drone Wars</a></li>
+        </ul>
+      </li>
+      <!-- <li><a href="#">Timelines</a></li> -->
+      <li><a href="dashboard.html" class="current">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Dashboard -->
+  <div id="vizContainer"></div>
+
+  <!-- Importing js file -->
+  <!-- <script src="js/main.js"></script> -->
+</body>
+
+</html>
