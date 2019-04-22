@@ -13,9 +13,9 @@
   <script type="text/javascript">
     function initViz() {
       var containerDiv = document.getElementById("vizContainer"),
-        url = "https://public.tableau.com/profile/afraz.ahmad#!/vizhome/DroneWars/Overview",
+        url = "https://public.tableau.com/views/DroneWars/Overview",
         options = {
-          hideTabs: true,
+          hideTabs: false,
           onFirstInteractive: function () {
             console.log("Run this code when the viz has finished loading.");
           }
@@ -40,7 +40,6 @@
           <li><a href="drone_wars.html">Drone Wars</a></li>
         </ul>
       </li>
-      <!-- <li><a href="#">Timelines</a></li> -->
       <li><a href="dashboard.html" class="current">Dashboard</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -48,7 +47,11 @@
 
 
   <!-- Dashboard -->
-  <div id="vizContainer"></div>
+  <div class="dashboard-container">
+    <div class="container">
+      <div id="vizContainer"></div>
+    </div>
+  </div>
 
   <!-- Importing js file -->
   <!-- <script src="js/main.js"></script> -->
