@@ -48,6 +48,9 @@ a {
   .btn-contact:hover {
     background: #666666; }
 
+.italic {
+  font-style: italic; }
+
 #coming-soon-page {
   background: #333;
   height: 100vh;
@@ -70,6 +73,13 @@ a {
 
 body {
   font-family: "lato", sans-serif; }
+
+#landing-page #landing-page-content {
+  height: 100vh; }
+  #landing-page #landing-page-content video {
+    height: 100vh;
+    width: 100vw;
+    background: #000; }
 
 #navbar {
   background: #333;
@@ -125,41 +135,40 @@ body {
               #navbar ul li:hover ul li:hover a, #navbar ul li:hover ul li.current a {
                 color: #fff; }
 
-#home-articles {
-  padding-top: 5rem; }
-  #home-articles .articles-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-    transition: visibility 2s;
-    padding: 2rem; }
-    #home-articles .articles-container a:hover {
-      transition: all ease-in 2s; }
-      #home-articles .articles-container a:hover .text {
-        visibility: visible;
-        letter-spacing: 1.5px; }
-        #home-articles .articles-container a:hover .text h4 {
-          font-weight: 100;
-          letter-spacing: 0.9px; }
-    #home-articles .articles-container .card {
-      position: relative;
-      width: auto;
-      min-height: 400px;
-      transition: all 2s 1s;
-      border-radius: 2px; }
-      #home-articles .articles-container .card-drone {
-        background: url("../img/drone.jpg") no-repeat center bottom/cover; }
-      #home-articles .articles-container .card:hover {
-        background: url("../img/drone-thumbnail.gif") no-repeat center center/cover; }
-      #home-articles .articles-container .card .text {
-        visibility: hidden;
-        position: absolute;
-        width: 100%;
-        bottom: 2rem;
-        border-left: 0.2rem solid #fff;
-        padding-left: 5px;
-        color: #111;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
+#home-top {
+  height: 100vh; }
+  #home-top #article-1 {
+    height: 90%; }
+    #home-top #article-1 .article-content {
+      height: 90%; }
+      #home-top #article-1 .article-content .title-container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        margin: 0 2rem; }
+        #home-top #article-1 .article-content .title-container .title {
+          font-family: 'Playfair Display', serif;
+          font-size: 6rem;
+          color: #111;
+          width: 70%;
+          margin: auto 2rem; }
+      #home-top #article-1 .article-content .text {
+        display: none; }
+  #home-top #article-1:hover .article-content {
+    background: url("../img/drone-thumbnail.gif") no-repeat center center/cover; }
+  #home-top #article-1:hover .text {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 4rem;
+    border-left: 0.2rem solid #fff;
+    padding-left: 5px;
+    color: #111;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
+  #home-top #article-1:hover .title-container {
+    display: none; }
 
 .header-drone {
   height: 295vh;
@@ -237,8 +246,7 @@ body {
       display: none; }
     .drone-article-body .drone-article-text div div {
       display: grid;
-      grid-auto-flow: column;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: 1fr;
       grid-gap: 3rem; }
       .drone-article-body .drone-article-text div div p {
         line-height: 1.5;
