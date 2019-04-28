@@ -251,6 +251,11 @@ body {
     margin-bottom: 2rem;
     position: relative;
     height: 100%; }
+    .drone-article-body .drone-article-text #article-advice {
+      margin-bottom: 4rem;
+      font-weight: 100;
+      color: #777;
+      font-style: italic; }
     .drone-article-body .drone-article-text div h3 {
       font-family: "Playfair Display", serif;
       padding-top: 1rem;
@@ -268,6 +273,12 @@ body {
         font-size: 1.2rem;
         line-height: 1.5;
         height: auto; }
+      .drone-article-body .drone-article-text div div .figures {
+        width: 100%;
+        height: auto; }
+        .drone-article-body .drone-article-text div div .figures img {
+          width: 100%;
+          height: auto; }
     .drone-article-body .drone-article-text div #history-of-drones + div, .drone-article-body .drone-article-text div #military-capacity + div {
       grid-template-rows: none; }
     .drone-article-body .drone-article-text div #legal-ramifications + div {
