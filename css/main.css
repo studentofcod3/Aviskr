@@ -32,7 +32,8 @@
   margin: 4rem 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #111; }
 
 .btn-contact {
   display: block;
@@ -50,6 +51,9 @@ a {
 
 .italic {
   font-style: italic; }
+
+ul {
+  list-style: none; }
 
 #coming-soon-page {
   background: #333;
@@ -72,7 +76,7 @@ a {
   box-sizing: border-box; }
 
 body {
-  font-family: "lato", sans-serif; }
+  font-family: "Old Standard TT", serif; }
 
 #navbar {
   background: #333;
@@ -89,12 +93,11 @@ body {
     #navbar .logo:hover {
       color: #cccccc; }
   #navbar ul {
-    list-style: none;
     font-family: "Playfair Display", serif; }
     #navbar ul li {
       color: #fff;
       display: inline-block;
-      margin: 1rem 2rem;
+      margin: 1rem 1.2rem;
       position: relative;
       font-size: 1rem; }
       #navbar ul li a {
@@ -130,6 +133,8 @@ body {
         height: 100%;
         width: 100%;
         background: #fff; }
+  #home-top #landing-page-phones {
+    display: none; }
 
 #editorials-top {
   height: 100vh; }
@@ -164,7 +169,7 @@ body {
       #editorials-top #article-1 .article-content .text {
         display: none; }
   #editorials-top #article-1:hover {
-    transition-delay: all 2s; }
+    transition: all 2s ease-in; }
     #editorials-top #article-1:hover .overlay {
       opacity: 0; }
     #editorials-top #article-1:hover .text {
@@ -178,7 +183,8 @@ body {
       color: #111;
       background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
     #editorials-top #article-1:hover .title-container {
-      display: none; }
+      transition: all 3s ease-in-out;
+      visibility: hidden; }
 
 .header-drone {
   height: 295vh;
@@ -218,7 +224,7 @@ body {
 
 .drone-article {
   position: relative;
-  padding: 0 4rem;
+  padding: 0 5rem;
   text-align: left; }
   .drone-article .date {
     text-transform: uppercase;
@@ -259,6 +265,7 @@ body {
       grid-template-rows: 1fr;
       grid-gap: 3rem; }
       .drone-article-body .drone-article-text div div p {
+        font-size: 1.2rem;
         line-height: 1.5;
         height: auto; }
     .drone-article-body .drone-article-text div #history-of-drones + div, .drone-article-body .drone-article-text div #military-capacity + div {
@@ -311,20 +318,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 14vh; }
+    height: 10vh; }
     #navbar .logo,
     .header-drone #navbar .logo {
       padding-bottom: 2rem; }
     #navbar ul li,
     .header-drone #navbar ul li {
-      margin: 0 4rem; }
+      margin: 0 3rem; }
       #navbar ul li:hover ul,
       .header-drone #navbar ul li:hover ul {
         z-index: 1; }
-  #home-articles {
-    padding-top: 0; }
-    #home-articles .articles-container .card {
-      height: 400px; }
+  #editorials-top #article-1 .article-content .overlay {
+    opacity: 0.5; }
   .header-drone {
     height: 110vh; }
     .header-drone .image-container {
@@ -345,17 +350,12 @@ body {
     max-width: 100vw; } }
 
 @media (max-width: 800px) {
-  #navbar,
-  .header-drone #navbar {
-    height: 18vh; }
-    #navbar .logo,
-    .header-drone #navbar .logo {
-      padding: 0; }
-    #navbar ul li,
-    .header-drone #navbar ul li {
-      margin: 0 2rem; }
-  #home-articles .articles-container .card {
-    height: 300px; }
+  #navbar .logo,
+  .header-drone #navbar .logo {
+    padding: 0; }
+  #navbar ul li,
+  .header-drone #navbar ul li {
+    margin: 0 2rem; }
   #subtitle-btns {
     padding: 0;
     font-size: .8rem; } }
@@ -363,31 +363,59 @@ body {
 @media (max-width: 500px) {
   #navbar,
   .header-drone #navbar {
-    height: 16vh; }
+    height: 12vh; }
     #navbar .logo,
     .header-drone #navbar .logo {
       padding-bottom: 0; }
     #navbar ul,
     .header-drone #navbar ul {
+      align-self: center;
       margin: 0;
       margin-bottom: .7rem; }
       #navbar ul li,
       .header-drone #navbar ul li {
         margin: 0 10px;
         font-size: 1rem; }
-  #home-articles {
-    padding-top: 1rem; }
-    #home-articles .articles-container .card {
-      height: 120px;
-      min-height: 120px; }
-      #home-articles .articles-container .card-drone:hover {
-        height: 65vh;
-        background: url("../img/drone-full.jpg") no-repeat center center/cover; }
+  #home-top #navbar ul {
+    display: none; }
+  #home-top #landing-page {
+    display: none; }
+  #home-top #landing-page-phones {
+    display: block;
+    margin-top: 5rem; }
+    #home-top #landing-page-phones #inner-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+      #home-top #landing-page-phones #inner-links a {
+        display: flex;
+        align-items: center;
+        height: 7rem;
+        width: 70%;
+        padding: 1rem 2rem;
+        font-size: 2rem; }
+        #home-top #landing-page-phones #inner-links a:before, #home-top #landing-page-phones #inner-links a:after {
+          content: '';
+          border-top: 2px solid #111;
+          flex: 1 0 20px; }
+  #editorials-top #article-1 .article-content .overlay {
+    opacity: 0.6; }
+  #editorials-top #article-1 .article-content .title-container .title {
+    font-size: 3rem; }
   .header-drone {
     margin-bottom: 2.8rem;
     height: 100vh; }
     .header-drone .image-container {
-      top: 16vh; }
+      top: 12vh; }
+  #subtitle-btns div {
+    flex-direction: column;
+    height: 15rem;
+    margin-top: 4rem;
+    padding: 2rem 0; }
+    #subtitle-btns div a {
+      margin-top: .5rem; }
   .drone-article-body .drone-article-text div div {
     display: block; }
   #contact .text-fields {
