@@ -74,13 +74,6 @@ a {
 body {
   font-family: "lato", sans-serif; }
 
-#landing-page #landing-page-content {
-  height: 100vh; }
-  #landing-page #landing-page-content video {
-    height: 100vh;
-    width: 100vw;
-    background: #000; }
-
 #navbar {
   background: #333;
   display: flex;
@@ -124,37 +117,57 @@ body {
           margin-bottom: 0.5rem; }
 
 #home-top {
+  width: auto;
+  height: 100vh;
+  overflow: hidden; }
+  #home-top #landing-page {
+    height: 100%; }
+    #home-top #landing-page #landing-page-content {
+      height: 100%; }
+      #home-top #landing-page #landing-page-content video {
+        object-fit: fill;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        background: #fff; }
+
+#editorials-top {
   height: 100vh; }
-  #home-top #article-1 {
+  #editorials-top #article-1 {
     height: 90%; }
-    #home-top #article-1 .article-content {
+    #editorials-top #article-1 .article-content {
       height: 90%;
       background: url("../img/drone-thumbnail.gif") no-repeat center center/cover; }
-      #home-top #article-1 .article-content .overlay {
-        transition: all 3s ease-in;
+      #editorials-top #article-1 .article-content .overlay {
+        transition: all 3s ease-in-out;
         height: 100%;
         opacity: 1;
         background: #fff; }
-      #home-top #article-1 .article-content .title-container {
+      #editorials-top #article-1 .article-content .title-container {
         display: flex;
         text-align: center;
         justify-content: center;
         align-items: center;
         height: 90%;
         margin: 0 2rem; }
-        #home-top #article-1 .article-content .title-container .title {
+        #editorials-top #article-1 .article-content .title-container:before, #editorials-top #article-1 .article-content .title-container:after {
+          content: '';
+          border-top: 2px solid #111;
+          margin-top: 20px;
+          flex: 1 0 20px; }
+        #editorials-top #article-1 .article-content .title-container .title {
           font-family: 'Playfair Display', serif;
           font-size: 6rem;
           color: #111;
           width: 70%;
           margin: auto 2rem; }
-      #home-top #article-1 .article-content .text {
+      #editorials-top #article-1 .article-content .text {
         display: none; }
-  #home-top #article-1:hover {
-    transition-delay: opacity 2s; }
-    #home-top #article-1:hover .overlay {
+  #editorials-top #article-1:hover {
+    transition-delay: all 2s; }
+    #editorials-top #article-1:hover .overlay {
       opacity: 0; }
-    #home-top #article-1:hover .text {
+    #editorials-top #article-1:hover .text {
       display: block;
       position: absolute;
       z-index: 2;
@@ -164,7 +177,7 @@ body {
       padding-left: 5px;
       color: #111;
       background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
-    #home-top #article-1:hover .title-container {
+    #editorials-top #article-1:hover .title-container {
       display: none; }
 
 .header-drone {
