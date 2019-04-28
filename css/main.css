@@ -275,10 +275,15 @@ body {
         height: auto; }
       .drone-article-body .drone-article-text div div .figures {
         width: 100%;
-        height: auto; }
+        height: auto;
+        text-align: center; }
         .drone-article-body .drone-article-text div div .figures img {
           width: 100%;
           height: auto; }
+        .drone-article-body .drone-article-text div div .figures .caption {
+          width: 100%;
+          font-size: 0.8rem;
+          font-style: italic; }
     .drone-article-body .drone-article-text div #history-of-drones + div, .drone-article-body .drone-article-text div #military-capacity + div {
       grid-template-rows: none; }
     .drone-article-body .drone-article-text div #legal-ramifications + div {
@@ -286,8 +291,10 @@ body {
     .drone-article-body .drone-article-text div #trump + div {
       grid-template-rows: repeat(autofill, 1fr); }
 
-.about-text p {
-  margin: 1rem auto; }
+.about-text {
+  margin-top: 4.8rem; }
+  .about-text p {
+    margin: 1rem auto; }
 
 #contact {
   margin: 3rem 0; }
