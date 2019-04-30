@@ -55,6 +55,9 @@ a {
 ul {
   list-style: none; }
 
+#home-top {
+  display: none; }
+
 #coming-soon-page {
   background: #333;
   height: 100vh;
@@ -334,6 +337,10 @@ body {
     position: relative; }
 
 @media (max-width: 1024px) {
+  #coming-soon-page {
+    display: flex; }
+  #home-top {
+    display: none; }
   #navbar,
   .header-drone #navbar {
     display: flex;
