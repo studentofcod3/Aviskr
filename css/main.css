@@ -277,8 +277,8 @@ body {
         width: 100%;
         height: auto;
         text-align: center;
-        border-top: #aaa solid 1px;
-        border-bottom: #aaa solid 1px;
+        border-top: #ddd solid 1px;
+        border-bottom: #ddd solid 1px;
         padding: 0.8rem 0; }
         .drone-article-body .drone-article-text div div .figures img {
           width: 100%;
