@@ -276,7 +276,10 @@ body {
       .drone-article-body .drone-article-text div div .figures {
         width: 100%;
         height: auto;
-        text-align: center; }
+        text-align: center;
+        border-top: #aaa solid 1px;
+        border-bottom: #aaa solid 1px;
+        padding: 0.8rem 0; }
         .drone-article-body .drone-article-text div div .figures img {
           width: 100%;
           height: auto; }
