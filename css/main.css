@@ -55,10 +55,8 @@ a {
 ul {
   list-style: none; }
 
-#home-top {
-  display: none; }
-
 #coming-soon-page {
+  display: none;
   background: #333;
   height: 100vh;
   width: 100vw;
@@ -339,6 +337,10 @@ body {
 @media (max-width: 1024px) {
   #coming-soon-page {
     display: flex; }
+    #coming-soon-page #mobile-home {
+      display: none; }
+    #coming-soon-page p {
+      font-size: 2rem; }
   #home-top {
     display: none; }
   #navbar,
@@ -389,6 +391,14 @@ body {
     font-size: .8rem; } }
 
 @media (max-width: 500px) {
+  #coming-soon-page span {
+    font-size: 2.4rem; }
+  #coming-soon-page p {
+    font-size: 1.5rem; }
+  #coming-soon-page #mobile-home {
+    display: inline; }
+  #coming-soon-page #tablet-home {
+    display: none; }
   #navbar,
   .header-drone #navbar {
     height: 12vh; }
