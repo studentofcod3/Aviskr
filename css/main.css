@@ -56,14 +56,14 @@ ul {
   list-style: none; }
 
 #coming-soon-page {
-  display: none;
   background: #333;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ddd; }
+  color: #ddd;
+  display: none; }
   #coming-soon-page span {
     font-size: 5.5rem;
     font-family: 'Cinzel Decorative', cursive; }
