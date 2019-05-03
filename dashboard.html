@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-139554955-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Old+Standard+TT|Playfair+Display"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
-  <title>Dashboard</title>
+      gtag("config", "UA-139554955-1");
+    </script>
 
-  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-  <script type="text/javascript">
-    function initViz() {
-      var containerDiv = document.getElementById("vizContainer"),
-        url = "https://public.tableau.com/views/DroneWars/Overview",
-        options = {
-          hideTabs: false,
-          onFirstInteractive: function () {
-            console.log("Run this code when the viz has finished loading.");
-          }
-        };
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Old+Standard+TT|Playfair+Display"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Dashboard</title>
 
-      var viz = new tableau.Viz(containerDiv, url, options);
-      // Create a viz object and embed it in the container div.
-    }
-  </script>
-</head>
+    <script
+      type="text/javascript"
+      src="https://public.tableau.com/javascripts/api/tableau-2.min.js"
+    ></script>
+    <script type="text/javascript">
+      function initViz() {
+        var containerDiv = document.getElementById("vizContainer"),
+          url = "https://public.tableau.com/views/DroneWars/Overview",
+          options = {
+            hideTabs: false,
+            onFirstInteractive: function() {
+              console.log("Run this code when the viz has finished loading.");
+            }
+          };
 
-<body onload="initViz();">
-  <nav id="navbar">
-    <a href="index.html" class="logo">
-      <p>Aviskr</p>
-    </a>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="editorials.html">Editorials</a></li>
-      <li><a href="dashboard.html" class='current'>Dashboard</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+        var viz = new tableau.Viz(containerDiv, url, options);
+        // Create a viz object and embed it in the container div.
+      }
+    </script>
+  </head>
 
+  <body onload="initViz();">
+    <nav id="navbar">
+      <a href="index.html" class="logo">
+        <p>Aviskr</p>
+      </a>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="editorials.html">Editorials</a></li>
+        <li><a href="dashboard.html" class="current">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Dashboard -->
-  <div class="dashboard-container">
-    <div class="container">
-      <div id="vizContainer"></div>
+    <!-- Dashboard -->
+    <div class="dashboard-container">
+      <div class="container">
+        <div id="vizContainer"></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Importing js file -->
-  <!-- <script src="js/main.js"></script> -->
-</body>
-
+    <!-- Importing js file -->
+    <!-- <script src="js/main.js"></script> -->
+  </body>
 </html>

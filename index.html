@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-139554955-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Lato|Playfair+Display" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
-  <title>Aviskr</title>
-</head>
+      gtag("config", "UA-139554955-1");
+    </script>
 
-<body>
-  <header id='home-top'>
-    <nav id="navbar">
-      <a href="index.html" class="logo">
-        <p>Aviskr</p>
-      </a>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="editorials.html">Editorials</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div id="landing-page">
-      <div id="landing-page-content">
-        <video autoplay="true" loop="true" muted>
-          <source src="img/landing-page.mp4" type="video/mp4">
-        </video>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Lato|Playfair+Display"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Aviskr</title>
+  </head>
+
+  <body>
+    <header id="home-top">
+      <nav id="navbar">
+        <a href="index.html" class="logo">
+          <p>Aviskr</p>
+        </a>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="editorials.html">Editorials</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="landing-page">
+        <div id="landing-page-content">
+          <video autoplay="true" loop="true" muted>
+            <source src="img/landing-page.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div id="landing-page-phones">
+        <div id="inner-links">
+          <a href="about.html">About</a>
+          <a href="editorials.html">Editorials</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <div id="coming-soon-page">
+      <div class="container">
+        <span class="logo"
+          >Aviskr <span id="mobile-home">mobile</span>
+          <span id="tablet-home">tablet</span>
+        </span>
+        <p>coming soon</p>
       </div>
     </div>
-    <div id="landing-page-phones">
-      <div id="inner-links">
-        <a href="about.html">About</a>
-        <a href="editorials.html">Editorials</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-    </div>
-  </header>
-
-
-  <div id="coming-soon-page">
-    <div class="container">
-      <span class="logo">Aviskr <span id="mobile-home">mobile</span> <span id="tablet-home">tablet</span> </span>
-      <p>coming soon</p>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
